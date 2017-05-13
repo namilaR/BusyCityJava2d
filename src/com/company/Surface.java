@@ -2,10 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Area;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.GeneralPath;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 /**
  * Created by Namila Radith on 4/25/2017.
@@ -32,8 +29,13 @@ public class Surface extends JPanel {
     drawWhiteBuilding(g);
     drawLightGrayBuilding(g);
     drawGrayBuilding(g);
+    drawDonutsShop2(g);
     drawCoffeShop(g);
     drawDonutsShop(g);
+    drawRoad(g);
+    drawCarType1(g);
+    drawCarType2(g);
+    drawCarType3(g);
     g.dispose();
 
     }
@@ -266,7 +268,96 @@ public class Surface extends JPanel {
         drawBuildingWindow(g,628,496,47,38,new Color(22,67,139 ));
     }
 
+    public void drawDonutsShop2(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        g2d.setPaint( new Color(254,240,222));
+        g2d.fillRect(490-450, 327, 205, 242);
+        drawBuildingWindow(g,505-450,408,47,38,new Color(22,67,139 ));
+        drawBuildingWindow(g,565-450,408,47,38,new Color(22,67,139 ));
+        drawBuildingWindow(g,626-450,408,47,38,new Color(22,67,139 ));
+        drawBuildingWindow(g,505-450,496,47,38,new Color(22,67,139 ));
+        drawBuildingWindow(g,568-450,492,47,76,new Color(22,67,139 ));
+        drawBuildingWindow(g,628-450,496,47,38,new Color(22,67,139 ));
+    }
+
+    public void drawRoad(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        g2d.setPaint( new Color(97, 97, 97));
+        g2d.fillRect( 0, 569, 1024, 300);
+    }
+
     public void drawCarType1(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        g2d.setPaint( new Color(160,2,1));
+        g2d.fillRoundRect(394, 647, 109, 53, 20, 20);
+        g2d.fillRoundRect(341, 682, 196, 48, 15, 15);
+        g2d.setPaint( new Color(0,0,0));
+        g2d.fillOval(366, 704, 40, 40);
+        g2d.fillOval(478, 704, 40, 40);
+        g2d.setPaint( new Color(89,89,89));
+        g2d.fillOval(373, 711, 26, 26);
+        g2d.fillOval(485, 711, 26, 26);
+
+
+    }
+
+    public void drawCarType2(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        g2d.setPaint( new Color(255, 247, 41));
+        g2d.fillRoundRect(394 +300, 647, 109, 53, 20, 20);
+        g2d.fillRoundRect(341+300, 682, 196, 48, 15, 15);
+        g2d.setPaint( new Color(0,0,0));
+        g2d.fillOval(366+300, 704, 40, 40);
+        g2d.fillOval(478+300, 704, 40, 40);
+        g2d.setPaint( new Color(89,89,89));
+        g2d.fillOval(373+300, 711, 26, 26);
+        g2d.fillOval(485+300, 711, 26, 26);
+
+
+    }
+
+    public void drawCarType3(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+
+        g2d.setPaint( new Color(41, 115, 255));
+        g2d.fillRoundRect(394 -300, 647, 109, 53, 20, 20);
+        g2d.fillRoundRect(341-300, 682, 196, 48, 15, 15);
+        g2d.setPaint( new Color(0,0,0));
+        g2d.fillOval(366-300, 704, 40, 40);
+        g2d.fillOval(478-300, 704, 40, 40);
+        g2d.setPaint( new Color(89,89,89));
+        g2d.fillOval(373-300, 711, 26, 26);
+        g2d.fillOval(485-300, 711, 26, 26);
+
 
     }
 
